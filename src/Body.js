@@ -1,8 +1,8 @@
-import Services from "./HeaderLinkers/Services";
-import Payment from "./HeaderLinkers/Payment";
-import FAQs from "./HeaderLinkers/FAQs";
-import Contact from "./HeaderLinkers/Contact";
-import About from "./HeaderLinkers/About";
+import Services from "./BodySections/Services";
+import Payment from "./BodySections/Payment";
+import FAQs from "./BodySections/FAQs";
+import Contact from "./BodySections/Contact";
+import About from "./BodySections/About";
 
 function Body() {
     return(

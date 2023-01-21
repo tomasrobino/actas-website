@@ -1,4 +1,4 @@
-import Home from "./HeaderLinkers/Home"
+import Home from "./BodySections/Home"
 
 function Header() {
     return (
