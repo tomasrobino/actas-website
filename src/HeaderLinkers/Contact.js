@@ -1,6 +1,6 @@
 function Contact() {
     return (
-        <a href="#contact us" className="headerElement">Contáctanos</a>
+        <h1 id="contact us">Contactanos</h1>
     )
 }
 

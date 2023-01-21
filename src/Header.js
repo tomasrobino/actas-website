@@ -1,17 +1,14 @@
-import Contact from "./HeaderLinkers/Contact"
-import FAQ from "./HeaderLinkers/FAQ"
 import Home from "./HeaderLinkers/Home"
-import Payment from "./HeaderLinkers/Payment"
-import Services from "./HeaderLinkers/Services"
 
 function Header() {
     return (
         <div className="header">
             <Home/>
-            <Services/>
-            <FAQ/>
-            <Payment/>
-            <Contact/>
+            <a href="#services" className="headerElement">Servicios</a>
+            <a href="#pagos" className="headerElement">Pagos</a>
+            <a href="#FAQs" className="headerElement">FAQs</a>
+            <a href="#contact us" className="headerElement">Contactanos</a>
+            <a href="#about" className="headerElement">Sobre nosotros</a>
         </div>
     )
 }

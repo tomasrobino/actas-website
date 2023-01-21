@@ -1,6 +1,7 @@
 function Payment() {
     return (
-        <a href="#pagos" className="headerElement">Pagos</a>
+        <h1 id="pagos">Pagos</h1>
+        
     )
 }
 
