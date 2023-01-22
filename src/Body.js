@@ -8,8 +8,8 @@ function Body() {
     return(
         <div className="body">
             <Services/>
-            <Payment/>
             <FAQs/>
+            <Payment/>
             <Contact/>
             <About/>
         </div>

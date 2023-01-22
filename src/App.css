@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 
 }
 
@@ -44,4 +44,24 @@
 
 .serviceImg {
     width: 200px;
+}
+
+#faqsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accordion {
+    background-color: rgb(255, 255, 255, 0.1);
+    width: 700px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.formField {
+    background-color: rgb(255, 255, 255, 0.3);
 }
