@@ -8,7 +8,7 @@ function Services() {
     if (text === 1) {
         return (
             <div>
-                <ServicesDiv text={text} setText={setText} />    
+                <ServicesDiv setText={setText} text={text}/>    
                 <div>
                     <p>Este texto es de cuando se apreta "investigacion"</p>
                 </div>
@@ -17,7 +17,7 @@ function Services() {
     } else if (text === 2) {
         return (
             <div>
-                <ServicesDiv text={text} setText={setText} />
+                <ServicesDiv setText={setText} text={text}/>
                 <p>Este texto es de cuando  se apreta "pedido"</p>
             </div>
         )
