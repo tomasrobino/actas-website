@@ -1,6 +1,9 @@
 function Payment() {
     return (
-        <h1 id="pagos">Pagos</h1>
+        <div className="bodyHeader">
+            <h1 id="pagos">Pagos</h1>
+        </div>
+        
         
     )
 }

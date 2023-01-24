@@ -26,7 +26,7 @@
     align-items: center;
 }
 
-.services {
+.bodyHeader {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,12 +44,6 @@
 
 .serviceImg {
     width: 200px;
-}
-
-#faqsDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .accordion {

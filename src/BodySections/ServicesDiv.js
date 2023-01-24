@@ -18,7 +18,7 @@ function ServicesDiv(props) {
     }
 
     return (
-        <div className="services">
+        <div className="bodyHeader">
             <h1 id="services">Servicios</h1>
             <div className="serviceDiv">
                 <Card onClick={handleClick} className="service1 serviceElement" sx={{ maxWidth: 300, backgroundColor: "rgb(255,255,255,0.1)" }}>
