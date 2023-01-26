@@ -1,7 +1,13 @@
+import { Typography } from "@mui/material";
+
 function About() {
     return (
         <div className="bodyHeader">
-            <h1 id="about">Sobre nosotros</h1>
+            <Typography
+                id="services"
+                fontSize={30}
+                marginBottom={5}
+            >Sobre nosotros</Typography>
             <p>nheverkfgksdlnbkvgsdbf</p>
         </div>
     )

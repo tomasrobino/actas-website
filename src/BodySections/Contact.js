@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Typography } from "@mui/material";
 
 function Contact() {
     //const [error, setError] = useState(false);
@@ -18,7 +18,11 @@ function Contact() {
 
     return (
         <div className="bodyHeader">
-            <h1 id="contact us">Contactanos</h1>
+            <Typography
+                id="services"
+                fontSize={30}
+                marginBottom={5}
+            >Contactanos</Typography>
             <div>
                 <h3>Mandanos un e-mail!</h3>
                 <form ref={form} onSubmit={handleSubmit} id="contactForm">
@@ -28,6 +32,7 @@ function Contact() {
                         name="user_email" //For emailjs
                         autoComplete="off"
                         className="formField"
+                        sx={{ marginBottom: 1}}
                     />
                     <TextField
                         label="Asunto"
@@ -35,20 +40,22 @@ function Contact() {
                         name="user_asunto" //For emailjs
                         autoComplete="off"
                         className="formField"
+                        sx={{ marginBottom: 1}}
                     />
                     <TextField
                         label="Mensaje"
                         type="text"
                         name="message" //For emailjs
                         autoComplete="off"
+                        multiline
+                        minRows={3}
                         className="formField"
+                        sx={{ marginBottom: 1}}
                     />
                     <Button
                         variant="contained"
                         type="submit"
-                    >
-                        Enviar
-                    </Button>
+                    >Enviar</Button>
                 </form>
             </div>
         </div>

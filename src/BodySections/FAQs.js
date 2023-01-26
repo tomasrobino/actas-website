@@ -3,7 +3,11 @@ import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/
 function FAQs() {
     return (
         <div className="bodyHeader">
-            <h1 id="FAQs">FAQs</h1>
+            <Typography
+                id="services"
+                fontSize={30}
+                marginBottom={5}
+            >FAQs</Typography>
             <Accordion className="accordion" sx={{ backgroundColor: "rgb(255, 255, 255, 0.1)" }}>
                 <AccordionSummary>
                     <Typography>Pregunta 1</Typography>

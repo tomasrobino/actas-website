@@ -7,23 +7,21 @@ function Services() {
 
     if (text === 1) {
         return (
-            <div>
-                <ServicesDiv setText={setText} text={text}/>    
-                <div>
-                    <p>Este texto es de cuando se apreta "investigacion"</p>
-                </div>
+            <div className="serviceSection">
+                <ServicesDiv setText={setText} text={text}/>
+                <p>Este texto es de cuando se apreta "investigacion"</p>
             </div>
         )
     } else if (text === 2) {
         return (
-            <div>
+            <div className="serviceSection">
                 <ServicesDiv setText={setText} text={text}/>
                 <p>Este texto es de cuando  se apreta "pedido"</p>
             </div>
         )
     } else {
         return (
-            <div>
+            <div className="serviceSection">
                 <ServicesDiv text={text} setText={setText} />
             </div>
         )

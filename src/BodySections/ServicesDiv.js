@@ -19,14 +19,18 @@ function ServicesDiv(props) {
 
     return (
         <div className="bodyHeader">
-            <h1 id="services">Servicios</h1>
+            <Typography
+                id="services"
+                fontSize={30}
+                marginBottom={5}
+            >SERVICIOS</Typography>
             <div className="serviceDiv">
-                <Card onClick={handleClick} className="service1 serviceElement" sx={{ maxWidth: 300, backgroundColor: "rgb(255,255,255,0.1)" }}>
+                <Card onClick={handleClick} className="service1 serviceElement" sx={{ maxWidth: 300, backgroundColor: "rgb(255,255,255,0.2)", boxShadow: 6}} variant="outlined">
                     <CardActionArea  className="service1">
                         <CardMedia
                             component="img"
                             sx={{ height: 200, objectFit: "contain", marginTop: "20px"}}
-                            image="genealogia.svg"
+                            image="descarga.jpg"
                             className="service1"
                         />
                         <CardContent className="service1">
@@ -39,12 +43,12 @@ function ServicesDiv(props) {
                         </CardContent>
                     </CardActionArea>
                 </Card>
-                <Card onClick={handleClick} className="service2 serviceElement" sx={{ maxWidth: 300, backgroundColor: "rgb(255,255,255,0.1)" }}>
+                <Card onClick={handleClick} className="service2 serviceElement" sx={{ maxWidth: 300, backgroundColor: "rgb(255,255,255,0.2)", boxShadow: 6}} variant="outlined">
                     <CardActionArea className="service2">
                         <CardMedia
                             component="img"
                             sx={{ height: 200, objectFit: "contain", marginTop: "20px"}}
-                            image="pedido.svg"
+                            image="acta.png"
                             className="service2"
                         />
                         <CardContent className="service2">

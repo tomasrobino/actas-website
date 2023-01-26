@@ -1,29 +1,50 @@
-.header {
-    position: sticky;
+@font-face {
+    font-family: "PlusJakartaSans";
+    src: local("PlusJakartaSans"), url("./fonts/PlusJakartaSans-VariableFont_wght.ttf") format(truetype);
+}
+
+#header {
+    position: fixed;
     z-index: 100;
     top: 0px;
-    background-color: red;
+    background-color: rgb(0, 0, 0, 0.75);
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-
+    justify-content: space-evenly;
 }
 
-.headerElement {
-    margin-right: 40px;
-    text-decoration: none;
-    color: black;
+#underHeader {
+    display: flex;
+    justify-content: center;
+}
+
+#diffuse {
+    position: absolute;
+    bottom: 0px;
+    background: linear-gradient(0deg, rgb(194, 207, 188), transparent);
+    width: 100%;
+    height: 120px;
+}
+
+#florence {
+    width: 100vw;
+    max-width: 100%;
 }
 
 .body {
-    background-image: url("../public/torre_pisa_pendente.jpg");
+    padding-top: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(194, 207, 188);
+}
+
+#bodyTop {
+    height: 600px;
 }
 
 .bodyHeader {
@@ -32,8 +53,32 @@
     align-items: center;
 }
 
+#home {
+    scroll-margin-top: 121px;
+}
+
 #services {
-    scroll-margin-top: 200px;
+    scroll-margin-top: 121px;
+}
+
+#FAQs {
+    scroll-margin-top: 121px;
+}
+
+#payment {
+    scroll-margin-top: 121px;
+}
+
+#contactUs {
+    scroll-margin-top: 121px;
+}
+
+#about {
+    scroll-margin-top: 121px;
+}
+
+.serviceSection {
+    /*background-image: url("../public/foto_actas.webp");*/
 }
 
 .serviceDiv {
@@ -54,6 +99,7 @@
 #contactForm {
     display: flex;
     flex-direction: column;
+    width: 500px;
 }
 
 .formField {
