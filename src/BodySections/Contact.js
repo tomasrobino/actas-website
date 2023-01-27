@@ -20,7 +20,7 @@ function Contact() {
                 main: "#ffffff"
             },
             secondary: {
-                main: "#000000"
+                main: "#76b5c5"
             }
         }
     })
@@ -36,7 +36,6 @@ function Contact() {
                 <form ref={form} onSubmit={handleSubmit} id="contactForm">
                     <TextField
                         label="Dirección de e-mail"
-                        variant="filled"
                         type="email"
                         name="user_email" //For emailjs
                         autoComplete="off"
@@ -45,7 +44,6 @@ function Contact() {
                     />
                     <TextField
                         label="Asunto"
-                        variant="filled"
                         type="text"
                         name="user_asunto" //For emailjs
                         autoComplete="off"
@@ -54,7 +52,6 @@ function Contact() {
                     />
                     <TextField
                         label="Mensaje"
-                        variant="filled"
                         type="text"
                         name="message" //For emailjs
                         autoComplete="off"

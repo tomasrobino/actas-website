@@ -10,6 +10,14 @@ function App() {
         <div id="home">
             <Header/>
             <Body/>
+            <a
+                href="https://wa.me/393389216223"
+                target="_blank"
+                rel="noopener noreferrer"
+                id="whatsapp_float"
+            >
+                <img src="whatsapp.svg" alt="" id="whatsapp-icon"></img>
+            </a>
         </div>
     );
 }
