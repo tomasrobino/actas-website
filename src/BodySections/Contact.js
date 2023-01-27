@@ -1,33 +1,42 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { TextField, Button, Typography } from "@mui/material";
+import { TextField, Button, Typography, createTheme, ThemeProvider } from "@mui/material";
 
 function Contact() {
-    //const [error, setError] = useState(false);
     const form = useRef();
 
     function handleSubmit(event) {
         event.preventDefault();
         emailjs.sendForm("service_i97qpy7", "template_x8oj62j", form.current, "FRJi0b7zeb2ehnXGb").then((result) => {
-            //window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
             console.log(result.text);
         }, (error) => {
             console.log(error.text);
         });
     }
 
+    const theme = createTheme({
+        palette: {
+            primary: {
+                main: "#ffffff"
+            },
+            secondary: {
+                main: "#000000"
+            }
+        }
+    })
+
     return (
         <div className="bodyHeader">
             <Typography
-                id="services"
+                id="contactUs"
                 fontSize={30}
                 marginBottom={5}
             >Contactanos</Typography>
             <div>
-                <h3>Mandanos un e-mail!</h3>
                 <form ref={form} onSubmit={handleSubmit} id="contactForm">
                     <TextField
                         label="Dirección de e-mail"
+                        variant="filled"
                         type="email"
                         name="user_email" //For emailjs
                         autoComplete="off"
@@ -36,6 +45,7 @@ function Contact() {
                     />
                     <TextField
                         label="Asunto"
+                        variant="filled"
                         type="text"
                         name="user_asunto" //For emailjs
                         autoComplete="off"
@@ -44,6 +54,7 @@ function Contact() {
                     />
                     <TextField
                         label="Mensaje"
+                        variant="filled"
                         type="text"
                         name="message" //For emailjs
                         autoComplete="off"
@@ -52,10 +63,13 @@ function Contact() {
                         className="formField"
                         sx={{ marginBottom: 1}}
                     />
-                    <Button
-                        variant="contained"
-                        type="submit"
-                    >Enviar</Button>
+                    <ThemeProvider theme={theme}>
+                        <Button
+                            variant="contained"
+                            type="submit"
+                            color="secondary"
+                        >Enviar</Button>
+                    </ThemeProvider>
                 </form>
             </div>
         </div>

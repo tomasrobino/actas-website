@@ -4,7 +4,7 @@ function FAQs() {
     return (
         <div className="bodyHeader">
             <Typography
-                id="services"
+                id="FAQs"
                 fontSize={30}
                 marginBottom={5}
             >FAQs</Typography>

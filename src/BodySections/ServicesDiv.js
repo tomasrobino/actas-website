@@ -23,7 +23,7 @@ function ServicesDiv(props) {
                 id="services"
                 fontSize={30}
                 marginBottom={5}
-            >SERVICIOS</Typography>
+            >Servicios</Typography>
             <div className="serviceDiv">
                 <Card onClick={handleClick} className="service1 serviceElement" sx={{ maxWidth: 300, backgroundColor: "rgb(255,255,255,0.2)", boxShadow: 6}} variant="outlined">
                     <CardActionArea  className="service1">

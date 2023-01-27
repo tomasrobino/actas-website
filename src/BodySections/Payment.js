@@ -4,7 +4,7 @@ function Payment() {
     return (
         <div className="bodyHeader">
             <Typography
-                id="services"
+                id="payment"
                 fontSize={30}
                 marginBottom={5}
             >Pagos</Typography>

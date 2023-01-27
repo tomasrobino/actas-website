@@ -1,4 +1,4 @@
-import { Button, createTheme, ThemeProvider } from "@mui/material";
+import { Button, createTheme, ThemeProvider, Typography } from "@mui/material";
 
 const theme = createTheme({
     palette: {
@@ -11,6 +11,13 @@ const theme = createTheme({
 function Header() {
     return (
         <div style={{ position: "relative", display: "inline" }}>
+            <Typography
+                fontSize={80}
+                color="white"
+                id="origine"
+            >
+                Origine.
+            </Typography>
             <div id="underHeader">
                 <img src="florence_duomo.jpg" alt="" id="florence"></img>
             </div>

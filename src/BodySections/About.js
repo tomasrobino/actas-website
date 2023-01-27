@@ -4,7 +4,7 @@ function About() {
     return (
         <div className="bodyHeader">
             <Typography
-                id="services"
+                id="about"
                 fontSize={30}
                 marginBottom={5}
             >Sobre nosotros</Typography>
