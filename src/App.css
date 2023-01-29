@@ -94,19 +94,24 @@
     width: 700px;
 }
 
+.serviceDivCol {
+    display: flex;
+    flex-direction: column;
+}
+
 .serviceImg {
     width: 200px;
 }
 
 .accordion {
     background-color: rgb(255, 255, 255, 0.1);
-    width: 700px;
+    width: 70vw;
 }
 
 #contactForm {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 70vw;
 }
 
 .formField {
