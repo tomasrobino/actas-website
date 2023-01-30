@@ -1,4 +1,7 @@
-import { Button, createTheme, ThemeProvider, Typography } from "@mui/material";
+import { useState } from "react";
+import { Button, createTheme, IconButton, List, SwipeableDrawer, ThemeProvider, Typography, ListItem, ListItemButton, ListItemText, Box, Divider } from "@mui/material";
+
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 const theme = createTheme({
     palette: {
@@ -9,43 +12,102 @@ const theme = createTheme({
 })
 
 function Header() {
-    return (
-        <div style={{ position: "relative", display: "inline" }}>
-            <Typography
-                fontSize={80}
-                color="white"
-                id="origine"
-            >
-                Origine.
-            </Typography>
-            <div id="underHeader">
-                <img src="florence_duomo.jpg" alt="" id="florence"></img>
+    const [drawer, setDrawer] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    function handleResize() {
+        setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    const toggleDrawer = (newDrawer) => () => {
+        setDrawer(newDrawer);
+    };
+
+    function handleClick(event) {
+        console.log(event.value)
+    }
+
+    if (windowWidth > 780) {
+        return (
+            <div style={{ position: "relative", display: "inline" }}>
+                <Typography
+                    fontSize={80}
+                    color="white"
+                    id="origine"
+                >
+                    Origine.
+                </Typography>
+                <div id="underHeader">
+                    <img src="florence_duomo.jpg" alt="" id="florence"></img>
+                </div>
+                <div id="header">
+                    <ThemeProvider theme={theme}>
+                        <Button href="#home"
+                            sx={{ fontSize: "20px" }}
+                        >Inicio</Button>
+                        <Button href="#services"
+                            sx={{ fontSize: "20px" }}
+                        >Servicios</Button>
+                        <Button href="#FAQs" className="headerElement"
+                            sx={{ fontSize: "20px" }}
+                        >FAQs</Button>
+                        <Button href="#contactUs" className="headerElement"
+                            sx={{ fontSize: "20px" }}
+                        >Contactanos</Button>
+                        <Button href="#payment" className="headerElement"
+                            sx={{ fontSize: "20px" }}
+                        >Pagos</Button>
+                        <Button href="#about" className="headerElement"
+                            sx={{ fontSize: "20px" }}
+                        >Sobre nosotros</Button>
+                    </ThemeProvider>
+                </div>
+                <div id="diffuse"></div>
             </div>
-            <div id="header">
-                <ThemeProvider theme={theme}>
-                    <Button href="#home"
-                        sx={{ fontSize: "20px" }}
-                    >Inicio</Button>
-                    <Button href="#services"
-                        sx={{ fontSize: "20px" }}
-                    >Servicios</Button>
-                    <Button href="#FAQs" className="headerElement"
-                        sx={{ fontSize: "20px" }}
-                    >FAQs</Button>
-                    <Button href="#contactUs" className="headerElement"
-                        sx={{ fontSize: "20px" }}
-                    >Contactanos</Button>
-                    <Button href="#payment" className="headerElement"
-                        sx={{ fontSize: "20px" }}
-                    >Pagos</Button>
-                    <Button href="#about" className="headerElement"
-                        sx={{ fontSize: "20px" }}
-                    >Sobre nosotros</Button>
-                </ThemeProvider>
+        )
+    } else {
+        return (
+            <div style={{ position: "relative", display: "inline" }}>
+                <Typography
+                    fontSize={80}
+                    color="white"
+                    id="origine"
+                >
+                    Origine.
+                </Typography>
+                <div id="underHeader">
+                    <img src="florence_duomo.jpg" alt="" id="florence"></img>
+                </div>
+                <IconButton id="iconDrawer" onClick={toggleDrawer(true)}>
+                    <MenuRoundedIcon/>
+                </IconButton>
+                <Box onClick={toggleDrawer(false)}>
+                    <SwipeableDrawer
+                        anchor="left"
+                        open={drawer}
+                        onClose={toggleDrawer(false)}
+                        onOpen={toggleDrawer(true)}
+                    >
+                        <List>
+                            {[["Inicio", "#home"], ["Servicios", "#services"], ["FAQs", "#FAQs"], ["Contactanos", "#contactUs"], ["Pagos", "#payment"], ["Sobre nosotros", "#about"]].map(([text, at]) => (
+                                <>
+                                    <ListItem key={text} disablePadding>
+                                        <ListItemButton component="a" href={at}>
+                                            <ListItemText primary={text}/>
+                                        </ListItemButton>
+                                    </ListItem>
+                                    <Divider/>
+                                </>
+                            ))}
+                        </List>
+                    </SwipeableDrawer>
+                </Box>
+                <div id="diffuse"></div>
             </div>
-            <div id="diffuse"></div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Header;

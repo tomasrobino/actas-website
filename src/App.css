@@ -16,6 +16,12 @@
     justify-content: space-evenly;
 }
 
+#iconDrawer {
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+}
+
 #underHeader {
     display: flex;
     justify-content: center;

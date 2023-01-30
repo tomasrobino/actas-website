@@ -6,11 +6,9 @@ import ServicesDivWide from "./ServicesDivWide";
 function Services() {
     const [text, setText] = useState(0);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    console.log(windowWidth.current);
 
     function handleResize() {
         setWindowWidth(window.innerWidth);
-        console.log(windowWidth);
     }
 
     window.addEventListener("resize", handleResize);
