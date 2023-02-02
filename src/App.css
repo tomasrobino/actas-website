@@ -19,7 +19,8 @@
 #iconDrawer {
     position: fixed;
     z-index: 100;
-    top: 0px;
+    top: 10px;
+    left: 10px;
 }
 
 #underHeader {
@@ -33,12 +34,27 @@
     left: 20%;
 }
 
+#origineMob {
+    position: absolute;
+    display: flex;
+    top: 10px;
+    left: 25%;
+}
+
 #diffuse {
     position: absolute;
     bottom: 0px;
     background: linear-gradient(0deg, rgb(194, 207, 188), transparent);
     width: 100%;
     height: 120px;
+}
+
+#diffuseMob {
+    position: absolute;
+    bottom: 0px;
+    background: linear-gradient(0deg, rgb(194, 207, 188), transparent);
+    width: 100%;
+    height: 40px;
 }
 
 #florence {

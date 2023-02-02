@@ -2,7 +2,7 @@ import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/m
 
 function ServiceCard(props) {
     return (
-        <Card onClick={props.handleClick} className="service1 serviceElement" sx={{ maxWidth: 300, backgroundColor: "rgb(255,255,255,0.2)", boxShadow: 6}} variant="outlined">
+        <Card onClick={props.handleClick} className="service1 serviceElement" sx={{ maxWidth: 300, backgroundColor: "rgb(255,255,255,0.2)", boxShadow: 6, borderRadius: 5}} variant="outlined">
             <CardActionArea  className={props.class}>
                 <CardMedia
                     component="img"

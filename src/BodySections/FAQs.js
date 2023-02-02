@@ -7,7 +7,7 @@ function FAQs() {
                 id="FAQs"
                 fontSize={30}
                 marginBottom={5}
-            >FAQs</Typography>
+            >Preguntas Frecuentes</Typography>
             <Accordion className="accordion" sx={{ backgroundColor: "rgb(255, 255, 255, 0.1)" }}>
                 <AccordionSummary>
                     <Typography>Pregunta 1</Typography>

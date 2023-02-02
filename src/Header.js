@@ -11,25 +11,15 @@ const theme = createTheme({
     }
 })
 
-function Header() {
+function Header(props) {
     const [drawer, setDrawer] = useState(false);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    function handleResize() {
-        setWindowWidth(window.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
 
     const toggleDrawer = (newDrawer) => () => {
         setDrawer(newDrawer);
     };
 
-    function handleClick(event) {
-        console.log(event.value)
-    }
-
-    if (windowWidth > 780) {
+    if (props.windowWidth > 780) {
         return (
             <div style={{ position: "relative", display: "inline" }}>
                 <Typography
@@ -52,7 +42,7 @@ function Header() {
                         >Servicios</Button>
                         <Button href="#FAQs" className="headerElement"
                             sx={{ fontSize: "20px" }}
-                        >FAQs</Button>
+                        >Preguntas Frecuentes</Button>
                         <Button href="#contactUs" className="headerElement"
                             sx={{ fontSize: "20px" }}
                         >Contactanos</Button>
@@ -70,17 +60,27 @@ function Header() {
     } else {
         return (
             <div style={{ position: "relative", display: "inline" }}>
-                <Typography
-                    fontSize={80}
-                    color="white"
-                    id="origine"
-                >
-                    Origine.
-                </Typography>
-                <div id="underHeader">
-                    <img src="florence_duomo.jpg" alt="" id="florence"></img>
+                <div id="origineMob">
+                    <Typography
+                        fontSize={50}
+                        color="white"
+                        fontWeight={"bold"}
+                        
+                    >
+                        O
+                    </Typography>
+                    <Typography
+                        fontSize={50}
+                        color="white"
+                        fontStyle={"italic"}
+                    >
+                        rigine.
+                    </Typography>
                 </div>
-                <IconButton id="iconDrawer" onClick={toggleDrawer(true)}>
+                <div id="underHeader">
+                    <img src="florence_duomo_cut_2.jpg" alt="" id="florence"></img>
+                </div>
+                <IconButton sx={{ background: "white", borderRadius: 2}} marginBottom={5} id="iconDrawer" onClick={toggleDrawer(true)}>
                     <MenuRoundedIcon/>
                 </IconButton>
                 <Box onClick={toggleDrawer(false)}>
@@ -90,7 +90,7 @@ function Header() {
                         onClose={toggleDrawer(false)}
                         onOpen={toggleDrawer(true)}
                     >
-                        <List>
+                        <List sx={{ width: "50vw", height: 200}}>
                             {[["Inicio", "#home"], ["Servicios", "#services"], ["FAQs", "#FAQs"], ["Contactanos", "#contactUs"], ["Pagos", "#payment"], ["Sobre nosotros", "#about"]].map(([text, at]) => (
                                 <>
                                     <ListItem key={text} disablePadding>
@@ -104,7 +104,7 @@ function Header() {
                         </List>
                     </SwipeableDrawer>
                 </Box>
-                <div id="diffuse"></div>
+                <div id="diffuseMob"></div>
             </div>
         )
     }
