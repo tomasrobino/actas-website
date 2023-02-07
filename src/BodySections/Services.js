@@ -1,7 +1,8 @@
 import { useState } from "react";
-import ServicesDivThin from "./ServicesDivThin";
-import ServicesDivWide from "./ServicesDivWide";
-
+import ServicesDivThin from "./Services/ServicesDivThin";
+import ServicesDivWide from "./Services/ServicesDivWide";
+import GenService from "./Services/GenService";
+import SearchService from "./Services/SearchService";
 
 function Services() {
     const [text, setText] = useState(0);
@@ -18,14 +19,14 @@ function Services() {
             return (
                 <div className="serviceSection">
                     <ServicesDivWide setText={setText} text={text}/>
-                    <p>Este texto es de cuando se apreta "investigacion"</p>
+                    <GenService/>
                 </div>
             )
         } else if (text === 2) {
             return (
                 <div className="serviceSection">
                     <ServicesDivWide setText={setText} text={text}/>
-                    <p>Este texto es de cuando  se apreta "pedido"</p>
+                    <SearchService/>
                 </div>
             )
         } else {

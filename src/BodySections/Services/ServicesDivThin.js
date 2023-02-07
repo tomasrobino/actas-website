@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 
 import ServiceCard from "./ServiceCard";
 
-function ServicesDivWide(props) {
+function ServicesDivThin(props) {
     function handleClick(event) {
         if (event.target.className.includes("service1")) {
             if (props.text!==1) {
@@ -26,7 +26,7 @@ function ServicesDivWide(props) {
                 fontSize={30}
                 marginBottom={5}
             >Servicios</Typography>
-            <div className="serviceDiv">
+            <div className="serviceDivCol">
                 <ServiceCard
                     title={"Investigación genealógica"}
                     subtitle={"Utiliza nuestro servicio de investigación genealógica"}
@@ -34,9 +34,10 @@ function ServicesDivWide(props) {
                     class={"service1"}
                     handleClick={handleClick}
                 />
+                <p>{props.shownText}</p>
                 <ServiceCard
                     title={"Solicitud de actas italianas"}
-                    subtitle={"Utiliza nuestro servicio de investigación solicitud de actas"}
+                    subtitle={"Utiliza nuestro servicio de solicitud de actas"}
                     image={"acta.png"}
                     class={"service2"}
                     handleClick={handleClick}
@@ -46,4 +47,4 @@ function ServicesDivWide(props) {
     )
 }
 
-export default ServicesDivWide;
+export default ServicesDivThin;

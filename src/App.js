@@ -6,6 +6,7 @@ import Body from './Body';
 import Header from './Header';
 
 import { useState } from "react";
+import Overlays from './Overlays';
 
 function App() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -20,14 +21,7 @@ function App() {
         <div id="home">
             <Header windowWidth={windowWidth}/>
             <Body windowWidth={windowWidth}/>
-            <a
-                href="https://wa.me/393389216223"
-                target="_blank"
-                rel="noopener noreferrer"
-                id="whatsapp_float"
-            >
-                <img src="whatsapp.svg" alt="" id="whatsapp-icon"></img>
-            </a>
+            <Overlays/>
         </div>
     );
 }
