@@ -1,8 +1,14 @@
 import { Typography } from "@mui/material";
 
 import Question from "../Question";
+import data from "../FAQsData";
 
 function FAQs() {
+    const arr=[];
+
+    for (const i in data) {
+        arr.push(<Question question={data[i].question} answer={data[i].answer}/>);
+    }
     return (
         <div className="bodyHeader">
             <Typography
@@ -10,8 +16,7 @@ function FAQs() {
                 fontSize={30}
                 marginBottom={5}
             >Preguntas Frecuentes</Typography>
-            <Question question={"pregunta 1"} answer={"respuesta 1"}/>
-            <Question question={"pregunta 1"} answer={"respuesta 1"}/>
+            {arr}
         </div>
         
     )

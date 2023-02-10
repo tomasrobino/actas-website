@@ -20,6 +20,8 @@ function Header(props) {
     };
 
     if (props.windowWidth > 780) {
+        let fontWindow = 20*(props.windowWidth/1366);
+
         return (
             <div style={{ position: "relative", display: "inline" }}>
                 <Typography
@@ -35,22 +37,22 @@ function Header(props) {
                 <div id="header">
                     <ThemeProvider theme={theme}>
                         <Button href="#home"
-                            sx={{ fontSize: "20px" }}
+                            sx={{ fontSize: fontWindow }}
                         >Inicio</Button>
                         <Button href="#services"
-                            sx={{ fontSize: "20px" }}
+                            sx={{ fontSize: fontWindow }}
                         >Servicios</Button>
                         <Button href="#FAQs" className="headerElement"
-                            sx={{ fontSize: "20px" }}
+                            sx={{ fontSize: fontWindow }}
                         >Preguntas Frecuentes</Button>
                         <Button href="#contactUs" className="headerElement"
-                            sx={{ fontSize: "20px" }}
+                            sx={{ fontSize: fontWindow }}
                         >Contactanos</Button>
                         <Button href="#payment" className="headerElement"
-                            sx={{ fontSize: "20px" }}
+                            sx={{ fontSize: fontWindow }}
                         >Pagos</Button>
                         <Button href="#about" className="headerElement"
-                            sx={{ fontSize: "20px" }}
+                            sx={{ fontSize: fontWindow }}
                         >Sobre nosotros</Button>
                     </ThemeProvider>
                 </div>
