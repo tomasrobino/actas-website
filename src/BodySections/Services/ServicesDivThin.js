@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material";
-
+import GenService from "./GenService";
+import SearchService from "./SearchService";
 import ServiceCard from "./ServiceCard";
 
 function ServicesDivThin(props) {
@@ -11,7 +11,10 @@ function ServicesDivThin(props) {
                 props.setText(0);
             }
         } else if (event.target.className.includes("service2")) {
-            if (props.text!==2) {
+            if (props.text===1) {
+                props.setText(2);
+                window.scrollBy(0, -700);
+            } else if (props.text===0) {
                 props.setText(2);
             } else {
                 props.setText(0);
@@ -19,13 +22,8 @@ function ServicesDivThin(props) {
         }
     }
 
-    return (
-        <div className="bodyHeader">
-            <Typography
-                id="services"
-                fontSize={30}
-                marginBottom={5}
-            >Servicios</Typography>
+    if (props.text===1) {
+        return (
             <div className="serviceDivCol">
                 <ServiceCard
                     title={"Investigación genealógica"}
@@ -34,7 +32,7 @@ function ServicesDivThin(props) {
                     class={"service1"}
                     handleClick={handleClick}
                 />
-                <p>{props.shownText}</p>
+                <GenService genWidth={"textServiceDivThin"} className="servicesThinElement"/>
                 <ServiceCard
                     title={"Solicitud de actas italianas"}
                     subtitle={"Utiliza nuestro servicio de solicitud de actas"}
@@ -43,8 +41,48 @@ function ServicesDivThin(props) {
                     handleClick={handleClick}
                 />
             </div>
-        </div>
-    )
+        )
+    } else if (props.text===2) {
+        return (
+            <div className="serviceDivCol">
+                <ServiceCard 
+                    title={"Investigación genealógica"}
+                    subtitle={"Utiliza nuestro servicio de investigación genealógica"}
+                    image={"descarga.jpg"}
+                    class={"service1"}
+                    handleClick={handleClick}
+                />
+                <ServiceCard
+                    title={"Solicitud de actas italianas"}
+                    subtitle={"Utiliza nuestro servicio de solicitud de actas"}
+                    image={"acta.png"}
+                    class={"service2"}
+                    handleClick={handleClick}
+                />
+                <SearchService searchWidth={"textServiceDivThin"}/>
+            </div>
+        )
+    } else {
+        return (
+            <div className="serviceDivCol">
+                <ServiceCard
+                    title={"Investigación genealógica"}
+                    subtitle={"Utiliza nuestro servicio de investigación genealógica"}
+                    image={"descarga.jpg"}
+                    class={"service1"}
+                    handleClick={handleClick}
+                    className="servicesThinElement"
+                />
+                <ServiceCard
+                    title={"Solicitud de actas italianas"}
+                    subtitle={"Utiliza nuestro servicio de solicitud de actas"}
+                    image={"acta.png"}
+                    class={"service2"}
+                    handleClick={handleClick}
+                />
+            </div>
+        )
+    }
 }
 
 export default ServicesDivThin;

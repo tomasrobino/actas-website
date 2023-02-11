@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Typography } from "@mui/material";
+
 import ServicesDivThin from "./Services/ServicesDivThin";
 import ServicesDivWide from "./Services/ServicesDivWide";
 import GenService from "./Services/GenService";
@@ -17,50 +19,37 @@ function Services() {
     if (windowWidth > 800) {
         if (text === 1) {
             return (
-                <div className="serviceSection">
+                <>
                     <ServicesDivWide setText={setText} text={text}/>
-                    <GenService/>
-                </div>
+                    <GenService genWidth={"textServiceDiv"}/>
+                </>
             )
         } else if (text === 2) {
             return (
-                <div className="serviceSection">
+                <>
                     <ServicesDivWide setText={setText} text={text}/>
-                    <SearchService/>
-                </div>
+                    <SearchService searchWidth={"textServiceDiv"}/>
+                </>
             )
         } else {
             return (
-                <div className="serviceSection">
-                    <ServicesDivWide text={text} setText={setText} />
-                </div>
+                <ServicesDivWide text={text} setText={setText} />
             )
         }
     } else {
-        if (text === 1) {
-            return (
-                <div className="serviceSection">
-                    <ServicesDivThin
-                        setText={setText}
-                        text={text}
-                        shownText={"Este texto es de cuando se apreta investigación"}
-                    />
-                </div>
-            )
-        } else if (text === 2) {
-            return (
-                <div className="serviceSection">
-                    <ServicesDivThin setText={setText} text={text}/>
-                    <p>Este texto es de cuando  se apreta "pedido"</p>
-                </div>
-            )
-        } else {
-            return (
-                <div className="serviceSection">
-                    <ServicesDivThin text={text} setText={setText} />
-                </div>
-            )
-        }
+        return (
+            <div className="bodyHeader">
+                <Typography
+                    id="services"
+                    fontSize={30}
+                    marginBottom={5}
+                >Servicios</Typography>
+                <ServicesDivThin
+                    setText={setText}
+                    text={text}
+                />
+            </div>
+        )
     }
 }
 

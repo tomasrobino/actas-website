@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
 
-function SearchService() {
+function SearchService(props) {
     return (
-        <div className="textServiceDiv">
+        <div className={props.searchWidth}>
             <Typography fontSize={25} marginBottom={3}>Solicitud de Actas</Typography>
             <Typography align="justify">
                 Este servicio es para el envío físico por correo de actas

@@ -106,10 +106,6 @@
     scroll-margin-top: 121px;
 }
 
-.serviceSection {
-    /*background-image: url("../public/foto_actas.webp");*/
-}
-
 .serviceDiv {
     display: flex;
     justify-content: space-between;
@@ -136,6 +132,21 @@
     width: 660px;
 }
 
+.textServiceDivThin {
+    background-color: rgb(255,255,255,0.5);
+    border: black;
+    border-width: 2 px;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 20px;
+    width: 70vw;
+}
+
+.serviceElement {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .accordion {
     background-color: rgb(255, 255, 255, 0.1);
     width: 70vw;
@@ -145,10 +156,6 @@
     display: flex;
     flex-direction: column;
     width: 70vw;
-}
-
-.formField {
-   /* background-color: rgb(255, 255, 255, 0.3);*/
 }
 
 .icon {

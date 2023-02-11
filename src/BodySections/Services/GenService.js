@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
 
-function GenService() {
+function GenService(props) {
     return (
-        <div className="textServiceDiv">
+        <div className={props.genWidth}>
             <Typography fontSize={25} marginBottom={3}>Investigación Genealógica</Typography>
             <Typography align="justify">
                 Este servicio es para aquellos que deseen obtener
