@@ -19,6 +19,15 @@ function Overlays() {
             >
                 <img src="instagram.svg" alt="" className="icon"></img>
             </a>
+            <a
+                href="https://www.facebook.com/OrigineCiudadania/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="float"
+                id="facebook_float"
+            >
+                <img src="facebook.png" alt="" id="aa"></img>
+            </a>
         </div>
     )
 }
