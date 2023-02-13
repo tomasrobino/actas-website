@@ -1,12 +1,10 @@
+import { useState } from "react";
+
 import './App.css';
-
-import "./fonts/PlusJakartaSans-VariableFont_wght.ttf"
-
 import Body from './Body';
 import Header from './Header';
-
-import { useState } from "react";
 import Overlays from './Overlays';
+import Bottom from "./Bottom";
 
 function App() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -22,6 +20,7 @@ function App() {
             <Header windowWidth={windowWidth}/>
             <Body windowWidth={windowWidth}/>
             <Overlays/>
+            <Bottom/>
         </div>
     );
 }

@@ -4,7 +4,7 @@ function Overlays() {
             <a
                 href="https://wa.me/393389216223"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
                 className="float"
                 id="whatsapp_float"
             >
@@ -13,7 +13,7 @@ function Overlays() {
             <a
                 href="https://www.instagram.com/origine.ciudadania/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
                 className="float"
                 id="instagram_float"
             >
@@ -22,11 +22,11 @@ function Overlays() {
             <a
                 href="https://www.facebook.com/OrigineCiudadania/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
                 className="float"
                 id="facebook_float"
             >
-                <img src="facebook.png" alt="" id="aa"></img>
+                <img src="facebook.png" alt="" id="facebookIcon"></img>
             </a>
         </div>
     )

@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 
-import Question from "../Question";
-import data from "../FAQsData";
+import Question from "./Question";
+import data from "./FAQsData";
 
 function FAQs() {
     const arr=[];
